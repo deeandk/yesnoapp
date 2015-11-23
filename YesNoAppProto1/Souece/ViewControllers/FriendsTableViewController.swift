@@ -80,18 +80,21 @@ class FriendsTableViewController: UITableViewController {
         selectedName = "\(labelArray[indexPath.row])"
         
         // SubViewController へ遷移するために Segue を呼び出す
-        performSegueWithIdentifier("toComposeViewController",sender: nil)
+//        performSegueWithIdentifier("toComposeViewController",sender: nil)
+        //Swift版 MJPopupViewControllerの呼び出し
+        let popupView = ComposeViewController(nibName:"PopupView", bundle:nil)
+        presentPopupViewController(popupView, animationType:MJPopupViewAnimationSlideBottomBottom)
     }
     
     // Segue 準備
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "toComposeViewController") {
-            let subVC: ComposeViewController = (segue.destinationViewController as? ComposeViewController)!
-            // SubViewController のselectedImgに選択された画像を設定する
-            subVC.selectedImage = selectedImage
-            subVC.selectedName = selectedName
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//        if (segue.identifier == "toComposeViewController") {
+//            let subVC: ComposeViewController = (segue.destinationViewController as? ComposeViewController)!
+//            // SubViewController のselectedImgに選択された画像を設定する
+//            subVC.selectedImage = selectedImage
+//            subVC.selectedName = selectedName
+//        }
+//    }
     
     
     /*

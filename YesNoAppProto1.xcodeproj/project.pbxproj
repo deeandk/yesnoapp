@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6733D4031B80202000AE2D25 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6733D4021B80202000AE2D25 /* ComposeViewController.swift */; };
+		674532DB1B91DB31001D14E1 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 674532D81B91DB31001D14E1 /* MJPopupBackgroundView.m */; };
+		674532DC1B91DB31001D14E1 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 674532DA1B91DB31001D14E1 /* UIViewController+MJPopupViewController.m */; };
 		676BD9011B6DA7CE00DDC3FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676BD9001B6DA7CE00DDC3FC /* AppDelegate.swift */; };
 		676BD9061B6DA7CE00DDC3FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 676BD9041B6DA7CE00DDC3FC /* Main.storyboard */; };
 		676BD9081B6DA7CE00DDC3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 676BD9071B6DA7CE00DDC3FC /* Assets.xcassets */; };
@@ -76,6 +78,11 @@
 /* Begin PBXFileReference section */
 		007E7892AD4DC15DAA827C05 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6733D4021B80202000AE2D25 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = ../ComposeViewController.swift; sourceTree = "<group>"; };
+		674532D61B91DB31001D14E1 /* YesNoAppProto1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YesNoAppProto1-Bridging-Header.h"; sourceTree = "<group>"; };
+		674532D71B91DB31001D14E1 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
+		674532D81B91DB31001D14E1 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
+		674532D91B91DB31001D14E1 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		674532DA1B91DB31001D14E1 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		676BD8FD1B6DA7CE00DDC3FC /* YesNoAppProto1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YesNoAppProto1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		676BD9001B6DA7CE00DDC3FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		676BD9051B6DA7CE00DDC3FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,6 +148,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		674532D01B91DB1D001D14E1 /* MJPopupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				674532D71B91DB31001D14E1 /* MJPopupBackgroundView.h */,
+				674532D81B91DB31001D14E1 /* MJPopupBackgroundView.m */,
+				674532D91B91DB31001D14E1 /* UIViewController+MJPopupViewController.h */,
+				674532DA1B91DB31001D14E1 /* UIViewController+MJPopupViewController.m */,
+				674532D61B91DB31001D14E1 /* YesNoAppProto1-Bridging-Header.h */,
+			);
+			name = MJPopupViewController;
+			sourceTree = "<group>";
+		};
 		676BD8F41B6DA7CE00DDC3FC = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +217,7 @@
 		676BD92E1B6DB11500DDC3FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				674532D01B91DB1D001D14E1 /* MJPopupViewController */,
 				676BD92F1B6DB12F00DDC3FC /* ViewControllers */,
 			);
 			name = Sources;
@@ -298,6 +318,7 @@
 		676BD8F51B6DA7CE00DDC3FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = key1;
 				TargetAttributes = {
@@ -446,6 +467,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				674532DB1B91DB31001D14E1 /* MJPopupBackgroundView.m in Sources */,
+				674532DC1B91DB31001D14E1 /* UIViewController+MJPopupViewController.m in Sources */,
 				6733D4031B80202000AE2D25 /* ComposeViewController.swift in Sources */,
 				676BD9351B6DB21900DDC3FC /* FriendsTableViewController.swift in Sources */,
 				676BD9011B6DA7CE00DDC3FC /* AppDelegate.swift in Sources */,
@@ -589,10 +612,13 @@
 			baseConfigurationReference = C402DC7B741CBADD440FA681 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YesNoAppProto1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.key1.YesNoAppProto1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YesNoAppProto1/YesNoAppProto1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -601,10 +627,12 @@
 			baseConfigurationReference = 007E7892AD4DC15DAA827C05 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YesNoAppProto1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.key1.YesNoAppProto1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YesNoAppProto1/YesNoAppProto1-Bridging-Header.h";
 			};
 			name = Release;
 		};
